@@ -17,7 +17,10 @@ const fetchPokemon = () => {
             console.log(data);
             let pokeImg = data.sprites.front_default;
             let pokeName = data.name;
-            let pokeMovimientos = data.moves;
+            let i = 0;
+            let pokeMovPrincipal = data.moves;
+            let pokeMovimientos = data.moves[i].move.name;
+            
             let pokeTipo = data.types[0].type.name;
             let pokeAbility = data.abilities;
             let pokeExper = data.base_experience;
@@ -25,16 +28,23 @@ const fetchPokemon = () => {
             
             console.log(pokeImg);               //Ver los valores de la API
             console.log(pokeName);
-            console.log(pokeMovimientos.length);
+            console.log(pokeMovimientos);
             console.log(pokeTipo);
             console.log(pokeAbility.length);
             console.log(pokeExper);
+
+            
+          
             document.getElementById('name').innerHTML = pokeName;
             document.getElementById('tipo').innerHTML = pokeTipo;
+            document.getElementById('mov-no').innerHTML = pokeMovPrincipal.length;
             document.getElementById('mov').innerHTML = pokeMovimientos;
-            document.getElementById('hab').innerHTML = pokeAbility;
+            document.getElementById('hab').innerHTML = pokeAbility.length;
             document.getElementById('exp').innerHTML = pokeExper;
+            
         }
+       
+        
     });
 }
 
