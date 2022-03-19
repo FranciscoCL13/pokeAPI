@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pokedex1.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="pokedex">
+        <div class="left-container">
+          <div class="left-container__top-section">
+            <div class="top-section__blue"></div>
+            <div class="top-section__small-buttons">
+              <div class="top-section__red"></div>
+              <div class="top-section__yellow"></div>
+              <div class="top-section__green"></div>
+            </div>
+          </div>
+          <div class="left-container__main-section-container">
+            <div class="left-container__main-section">
+              <div class="main-section__white">
+                <div class="main-section__black">
+                  <div class="main-screen ">
+                    <div class="screen__header">
+                      <span class="poke-name"></span>
+                      <span class="poke-id"></span>
+                    </div>
+                    <div class="screen__image">
+                      <img src="./pokeball.png"  id="pokeImg" class="poke-front-image" alt="front">
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="left-container__controllers">
+                <div class="controllers__d-pad">
+                  <div class="d-pad__cell top"></div>
+                  <div class="d-pad__cell left"></div>
+                  <div class="d-pad__cell middle"></div>
+                  <div class="d-pad__cell right"></div>
+                  <div class="d-pad__cell bottom"></div>
+                </div>
+                <div class="controllers__buttons">
+                  <div class="buttons__button">B</div>
+                  <div class="buttons__button">A</div>
+                </div>
+              </div>
+            </div>
+            <div class="left-container__right">
+              <div class="left-container__hinge"></div>
+              <div class="left-container__hinge"></div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="right-container__black">
+            <div class="right-container__screen">
+              <div id="pokeTipe" class="list-item"></div>
+              <div class="list-item"><p>Nombre:</p></div>
+              <div class="list-item"><p>Tipo:</p></div>
+              <div class="list-item"><p>No. Movimientos:</p></div>
+              <div class="list-item"><p>Habilidades:</p></div>
+              <div class="list-item"><p>Experiencia:</p></div>
+              <div class="list-item"></div>
+              <div class="list-item"></div>
+              <div class="list-item"></div>
+              <div class="list-item"></div>
+              <div class="list-item"></div>
+              <div id="name" class="list-item"></div>
+              <div id="tipo" class="list-item"></div>
+              <div id="mov" class="list-item"></div>
+              <div id="hab" class="list-item"></div>
+              <div id="exp" class="list-item"></div>
+              
+            </div>
+          </div>
+          <div class="right-container__buttons">
+            <input type="text" placeholder="Nombre Pokemón" id="pokeName" name="pokeName">
+            <button onclick="fetchPokemon()">Buscar Pokemón</button>
+          </div>
+        </div>
+      </div>
+    <script src="./pokedex1.js"></script>
+</body>
+</html>
